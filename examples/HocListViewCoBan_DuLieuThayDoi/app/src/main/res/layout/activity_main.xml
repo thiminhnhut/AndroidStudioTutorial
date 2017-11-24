@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.desktop.minhnhut.hoclistviewcoban_dulieuthaydoi.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Mời bạn nhập tên" />
+
+    <EditText
+        android:id="@+id/txtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Nhập tên vào đây"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLuuDuLieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Lưu dữ liệu"
+        android:textAllCaps="false" />
+
+    <ListView
+        android:id="@+id/lvTen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/colorAccent" />
+</LinearLayout>
