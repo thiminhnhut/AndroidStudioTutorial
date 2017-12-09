@@ -34,7 +34,9 @@ public class FragmentA extends Fragment {
         buttonFragA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), editTextFragA.getText().toString(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), editTextFragA.getText().toString(), Toast.LENGTH_SHORT).show();
+                TextView textViewMain = getActivity().findViewById(R.id.textViewMain);
+                textViewMain.setText(editTextFragA.getText().toString());
             }
         });
 
