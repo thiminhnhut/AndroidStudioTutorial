@@ -40,4 +40,8 @@ public class FragmentA extends Fragment {
 
         return view;
     }
+
+    public void GanNoiDung(String noidung) {
+        textViewFragA.setText(noidung);
+    }
 }

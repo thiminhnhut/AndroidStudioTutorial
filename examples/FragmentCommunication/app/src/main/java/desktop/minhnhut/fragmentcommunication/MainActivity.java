@@ -1,5 +1,6 @@
 package desktop.minhnhut.fragmentcommunication;
 
+import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragmentA);
+                fragmentA.GanNoiDung("Change by Activity");
             }
         });
     }
