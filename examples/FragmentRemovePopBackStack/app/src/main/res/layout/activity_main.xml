@@ -38,6 +38,7 @@
 
     <Button
         android:id="@+id/btnBack"
+        android:onClick="back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -77,6 +78,7 @@
 
     <Button
         android:id="@+id/btnPopA"
+        android:onClick="popA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnBack"

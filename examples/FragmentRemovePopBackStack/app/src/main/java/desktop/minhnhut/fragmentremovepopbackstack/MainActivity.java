@@ -22,18 +22,21 @@ public class MainActivity extends AppCompatActivity {
     public void addA(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frameContent, new FragmentA(),tagFragA);
+        fragmentTransaction.addToBackStack(tagFragA);
         fragmentTransaction.commit();
     }
 
     public void addB(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frameContent, new FragmentB(),tagFragB);
+        fragmentTransaction.addToBackStack(tagFragB);
         fragmentTransaction.commit();
     }
 
     public void addC(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frameContent, new FragmentC(),tagFragC);
+        fragmentTransaction.addToBackStack(tagFragC);
         fragmentTransaction.commit();
     }
 
@@ -62,5 +65,13 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.remove(fragmentC);
             fragmentTransaction.commit();
         }
+    }
+
+    public void back(View view) {
+        getFragmentManager().popBackStack();
+    }
+
+    public void popA(View view) {
+        getFragmentManager().popBackStack(tagFragA, 0);
     }
 }
