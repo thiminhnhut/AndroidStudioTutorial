@@ -74,4 +74,13 @@ public class MainActivity extends AppCompatActivity {
     public void popA(View view) {
         getFragmentManager().popBackStack(tagFragA, 0);
     }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
