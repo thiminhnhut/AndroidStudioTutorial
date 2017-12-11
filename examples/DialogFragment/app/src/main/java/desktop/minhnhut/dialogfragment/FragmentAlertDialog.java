@@ -12,8 +12,14 @@ import android.widget.Toast;
  */
 
 public class FragmentAlertDialog extends DialogFragment {
+
+    DeleteData deleteData;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+        deleteData = (DeleteData) getActivity();
+
         AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
 
         dialog.setTitle("Xác nhận");
@@ -22,14 +28,16 @@ public class FragmentAlertDialog extends DialogFragment {
         dialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(getActivity(), "Đồng ý xóa sản phầm", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Đồng ý xóa sản phầm", Toast.LENGTH_SHORT).show();
+                deleteData.deleteValue(true);
             }
         });
 
         dialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(getActivity(), "Không đồng ý xóa sản phầm", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Không đồng ý xóa sản phầm", Toast.LENGTH_SHORT).show();
+                deleteData.deleteValue(false);
             }
         });
 
